@@ -1,4 +1,4 @@
-PROCEDURE Insertion(arr:ARRAY_OF_INTGER);
+PROCEDURE Insertion(arr:ARRAY_OF_INTGER)
 
 VAR i,j,key:INTEGER;
 
