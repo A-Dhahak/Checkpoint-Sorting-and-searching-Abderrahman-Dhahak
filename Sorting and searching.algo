@@ -1,0 +1,41 @@
+PROCEDURE Insertion(arr:ARRAY_OF_INTGER);
+
+VAR i,j,key:INTEGER;
+
+BEGIN
+
+FOR i FROM 1 TO arr.length-1 DO
+  key = arr[i]; 
+  j = i - 1;
+  WHILE (j >= 0 && arr[j] > key) 
+  arr[j + 1] = arr[j];
+  j = j - 1;
+  END_WHILE
+  arr[j + 1] = key;
+  END_FOR
+  Write(arr);
+  END
+
+  ALGORITHM Insertion_sort
+
+  VAR 
+  n,i:INTEGER;
+  arr:ARRAY_OF_INTEGER[];
+
+  BEGIN
+
+  REPEAT
+  Read(n);
+  UNTIL (n>0)
+
+  n:=arr.length; 
+
+  FOR i FROM 0 TO n-1 DO
+  Read(arr[i]);
+  END_FOR
+
+  Insertion(arr);
+
+  END
+
+
